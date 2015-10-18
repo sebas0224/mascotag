@@ -1,0 +1,2 @@
+module PetinfoHelper
+end
