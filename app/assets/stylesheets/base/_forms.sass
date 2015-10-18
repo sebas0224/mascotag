@@ -1,0 +1,71 @@
+input,
+label,
+select 
+  padding-left: 5px
+  padding-right: 5px
+
+textarea, select[multiple=multiple] 
+  background-color: transparent
+  border-radius: 0
+  border: none
+  border-bottom: 2px solid white
+  box-shadow: none
+  margin-bottom: 5px
+  padding: 1em
+  width: 100%
+  margin: 0
+  transition: all 0.3s ease-in-out
+
+  &:focus 
+    border-color: transparent
+    box-shadow: transparent
+    border-bottom: 2px solid black
+    outline: none
+
+textarea 
+  resize: none
+
+input[type="search"], input[type="text"], input[type="password"]
+  width: 150px
+  font-size: 16px
+  font-family: 'Roboto', sans-serif
+  height: 25px
+  border: none
+  padding-left: 20px
+  -webkit-transition: all 0.3s ease-in-out
+  -moz-transition: all 0.3s ease-in-out
+  -o-transition: all 0.3s ease-in-out
+  -ms-transition: all 0.3s ease-in-out
+  transition: all 0.3s ease-in-out
+  &:focus
+    outline: none
+    box-shadow: -0.5px 1px 3px black
+
+input[type="checkbox"],
+input[type="radio"] 
+  position: absolute
+  top: 40px
+  background: white
+  border: none
+
+input[type="file"] 
+  padding-bottom: 5px
+  width: 100%
+
+select 
+  margin-bottom: 5px
+  max-width: 100%
+  width: auto
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+  display: none
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill
+  background-color: white !important
+  background-image: none !important
+  color: $red !important

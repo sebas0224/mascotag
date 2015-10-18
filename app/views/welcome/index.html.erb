@@ -3,10 +3,26 @@
     <div class="hamburger">
       
     </div>
+    <div class="login">
+      <%= form_tag :action => :create do %>
+
+        <%= text_field_tag(:user, params[:text], options = {:type => 'text', :placeholder => 'Usuario' })%>
+        <%= password_field_tag(:password, params[:text], options = {:type => 'password', :placeholder => 'Contraseña' })%>
+        <%= check_box_tag 'rememberme', false, :disabled => false%> <p class="remember">recordarme </p>
+
+        <%= submit_tag '▶' %>
+
+      <% end %>
+      <div class="loginhelper">
+        <a href="#">Olvide mi contraseña</a> / <a href="#">Registrarse</a>
+      </div>
+    </div>
   </section>
 </header>
 
-
+<section class="hero">
+  
+</section>
 <div class="container">
   <nav>
    <%= image_tag("facebook.svg", alt: "facebook") %>

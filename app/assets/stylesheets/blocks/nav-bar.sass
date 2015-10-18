@@ -1,6 +1,32 @@
 header
-  background: magenta
+  position: absolute
+  background: $light-blue
   width: 100%
-  height: 6rem
+  height: 5rem
+  top: 1rem
   section.nav-bar
     width: 1280px
+    .login
+      float: right
+      height: 5rem
+      form
+        position: relative
+        top: 20%
+        input[type="submit"]
+          float: right
+          top: -3px
+          position: absolute
+          right: 0
+          height: 32px
+          width: 32px
+        p.remember
+          padding-left: 20px
+          padding-top: 10px
+          color: white
+          font-size: 14px
+      .loginhelper
+        float: right
+        color: white
+        a
+          color: inherit
+          font-size: 14px

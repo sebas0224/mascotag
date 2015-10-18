@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   #get 'welcome/index'
   root 'welcome#index'
   get 'info' => 'petinfo#index'
+  get 'welcome/create'
 end
