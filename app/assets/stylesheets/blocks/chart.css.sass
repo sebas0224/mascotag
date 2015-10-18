@@ -1,0 +1,73 @@
+body
+	font-size: 16px 
+
+.chart
+	width: 100%
+	padding: 16px 0 
+	display: block
+	text-align: center
+	width: 100%
+	max-width: 1024px
+	margin: 0 auto
+	position: relative
+
+	.inner
+
+	.shots, .diseases, .deworming
+		display: inline-block
+		width: 30%
+		vertical-align: top
+
+	.deworming
+		margin-right: 3px
+
+	.shots
+		padding-bottom: 5px
+
+	.diseases
+		margin-left: 3px 
+		
+
+	.titlede, .titlesh, .titledi
+		font-size: 1.7rem
+		background-color: white
+		padding-bottom: 10px
+
+	.titlede
+		color: darken(#8085D1, 20)
+		border-bottom: 3px solid #8085D1
+
+	.titlesh
+		color: darken(#86A2DB, 20)
+		border-bottom: 3px solid #86A2DB
+
+	.titledi
+		color: darken(#86CFDB, 30)
+		border-bottom: 3px solid #86CFDB
+
+
+	li 
+		text-align: left
+		padding-top: 15px
+		position: relative
+		padding-left: 21px
+
+		&:before
+			content: ''
+			position: absolute
+			width: 5px
+			height: 5px
+			border-radius: 50%
+			top: 65%
+			left: 10px
+
+		&.a
+			&:before
+				background: #8085D1
+
+		&.b
+			&:before
+				background: #80D1C7
+
+
+
