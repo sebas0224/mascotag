@@ -20,11 +20,19 @@
   </section>
 </header>
 
-<section class="hero">
-  
+<section class="search-hero">
+  <div class="container">
+    <div class="inner">
+      <img src="" alt="" class="white-logo">
+      <div class="text">
+        <p>Lorem ipsum dolor sit amet, laudantium optio deserunt dolorum veniam harum molestias deleniti! Numquam quaerat nemo cumque similique, earum dolorum.</p>
+      </div>
+      <div class="form">
+        <%= form_tag({controller: "petinfo", action: "index"},method: "get", class: "search-form", autocomplete:"on") do %>
+          <%= text_field_tag(:mascotag, params[:search_text], options = {:type => 'search', :autofocus => true, :placeholder => 'Ingresa tu código' })%>
+          <%= submit_tag '▶'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </section>
-<div class="container">
-  <nav>
-   <%= image_tag("facebook.svg", alt: "facebook") %>
-  </nav>
-</div>
