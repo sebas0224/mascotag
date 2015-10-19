@@ -1,7 +1,7 @@
 <header>
   <section class="nav-bar">
-    <div class="hamburger">
-      
+    <div class="logo">
+      <%=image_tag('logo-mascotag.png', class:'white-logo', height: '80', width: '400')%>
     </div>
     <div class="login">
       <%= form_tag :action => :create do %>
@@ -18,12 +18,15 @@
       </div>
     </div>
   </section>
+  <div class="hamburger">
+  <p> ☰ </p>
+  </div>
 </header>
 
 <section class="search-hero">
   <div class="container">
     <div class="inner">
-      <img src="" alt="" class="white-logo">
+      <%=image_tag('mascotag-single.png', class:'white-logo', height: '100', width: '100')%>
       <div class="text">
         <p>Lorem ipsum dolor sit amet, laudantium optio deserunt dolorum veniam harum molestias deleniti! Numquam quaerat nemo cumque similique, earum dolorum.</p>
       </div>
@@ -34,5 +37,11 @@
         <% end %>
       </div>
     </div>
+  </div>
+  <div class="social">
+    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+    <a href="#"><i class="fa fa-tumblr fa-2x"></i></a>
+    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
   </div>
 </section>
