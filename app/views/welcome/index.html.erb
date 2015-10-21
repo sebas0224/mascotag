@@ -1,7 +1,7 @@
 <header>
   <section class="nav-bar">
     <div class="logo">
-      <%=image_tag('mascotag-blanco.png', class:'white-logo', width: '100')%>
+      <%=image_tag('mascotag-caps.png', class:'white-logo', width: '350')%>
     </div>
     <div class="login">
       <%= form_tag :action => :create do %>
@@ -31,7 +31,7 @@
       </div>
       <div class="text">
         <p> Con solamente un código de tres digitos tu mascota tendra un lugar en la web, con información en caso de perdida, historial médico, vistas de instagram y mucho más! </p>
-        <h5><a href="https://www.youtube.com/" title="Video de servicios Mascotag">ver video</a></h5>
+        <h5><a href="https://www.youtube.com/" title="Video de servicios Mascotag" target="_blank">ver video</a></h5>
       </div>
       <div class="form">
         <%= form_tag({controller: "petinfo", action: "index"},method: "get", class: "search-form", autocomplete:"on") do %>
