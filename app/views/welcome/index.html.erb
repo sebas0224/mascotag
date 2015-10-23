@@ -1,0 +1,88 @@
+<header>
+  <section class="nav-bar">
+    <div class="logo">
+      <%=image_tag('mascotag-caps.png', class:'white-logo', width: '350')%>
+    </div>
+    <div class="login">
+      <%= form_tag :action => :create do %>
+
+        <%= text_field_tag(:user, params[:text], options = {:type => 'text', :placeholder => 'Usuario' })%>
+        <%= password_field_tag(:password, params[:text], options = {:type => 'password', :placeholder => 'Contraseña' })%>
+        <%= check_box_tag 'rememberme', false, :disabled => false%> <p class="remember">recordarme </p>
+
+        <%= submit_tag '▶' %>
+
+      <% end %>
+      <div class="loginhelper">
+        <a href="#">Olvide mi contraseña</a> / <a href="#">Registrarse</a>
+      </div>
+    </div>
+  </section>
+  <div class="hamburger">
+  <p> ☰ </p>
+  </div>
+</header>
+
+<section class="search-hero">
+  <div class="container">
+    <div class="inner">
+      <div class="title">
+        <h3>Toda la Información de tu mascota en un solo lugar</h3>
+      </div>
+      <div class="text">
+        <p> Con solamente un código de tres digitos tu mascota tendra un lugar en la web, con información en caso de perdida, historial médico, vistas de instagram y mucho más! </p>
+        <h5><a href="https://www.youtube.com/" title="Video de servicios Mascotag" target="_blank">ver video</a></h5>
+      </div>
+      <div class="form">
+        <%= form_tag({controller: "petinfo", action: "index"},method: "get", class: "search-form", autocomplete:"on") do %>
+          <%= text_field_tag(:mascotag, params[:search_text], options = {:type => 'search', :autofocus => true, :placeholder => 'Ingresa tu código' })%>
+          <%= submit_tag '▶'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="social">
+    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+    <a href="#"><i class="fa fa-tumblr fa-2x"></i></a>
+    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+  </div>
+</section>
+
+  <div class="modal">
+   <div class="modal-box">
+      <div class="head">
+      <h1>Crear una cuenta</h1>
+        <p>Inicia sesión si ya tienes una cuenta</p>
+      </div>
+      <%= form_for :user, url: {action: "create"} do |user_form| %>
+                
+        <div class="input">
+          <%= user_form.text_field :name, placeholder: 'Nombre', class: 'data' %>
+        </div>
+        <div class="input">
+          <%= user_form.email_field :email, placeholder: 'Email', class: 'data'%>
+        </div>
+        <div class="input">
+          <%= user_form.password_field :password, placeholder: 'Contraseña', class: 'data'%>
+        </div>
+          <div class="input">
+          <%= user_form.phone_field :phone, placeholder: 'Teléfono', class: 'data'%>
+        </div>
+
+        <% end %>
+
+    <footer>
+      <button type="submit"> Crear cuenta</button>
+
+    </footer>
+   </div>
+ </div> 
+
+
+
+
+
+
+
+
