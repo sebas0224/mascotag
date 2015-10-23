@@ -48,3 +48,41 @@
     <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
   </div>
 </section>
+
+  <div class="modal">
+   <div class="modal-box">
+      <div class="head">
+      <h1>Crear una cuenta</h1>
+        <p>Inicia sesión si ya tienes una cuenta</p>
+      </div>
+      <%= form_for :user, url: {action: "create"} do |user_form| %>
+                
+        <div class="input">
+          <%= user_form.text_field :name, placeholder: 'Nombre', class: 'data' %>
+        </div>
+        <div class="input">
+          <%= user_form.email_field :email, placeholder: 'Email', class: 'data'%>
+        </div>
+        <div class="input">
+          <%= user_form.password_field :password, placeholder: 'Contraseña', class: 'data'%>
+        </div>
+          <div class="input">
+          <%= user_form.phone_field :phone, placeholder: 'Teléfono', class: 'data'%>
+        </div>
+
+        <% end %>
+
+    <footer>
+      <button type="submit"> Crear cuenta</button>
+
+    </footer>
+   </div>
+ </div> 
+
+
+
+
+
+
+
+
