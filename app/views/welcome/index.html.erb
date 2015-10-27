@@ -17,7 +17,7 @@
 
       <% end %>
       <div class="loginhelper">
-        <a href="#">Olvide mi contraseña</a> / <a href="#">Registrarse</a>
+        <a href="#" id="forgot-data">Olvide mi contraseña</a> / <a href="#" id="register">Registrarse</a>
       </div>
     </div>
   </section>
@@ -48,15 +48,15 @@
     <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
   </div>
 </section>
-<!-- hide modal
-  <div class="modal">
-   <div class="modal-box">
-      <div class="head">
-      <h1>Crear una cuenta</h1>
-        <p>Inicia sesión si ya tienes una cuenta</p>
-      </div>
+
+<section class="modal-register">
+  <div class="modal-box">
+    <div class="head">
+      <h3>Crear una cuenta</h3>
+      <p>Inicia sesión si ya tienes una cuenta</p>
+    </div>
+    <div class="register-form">
       <%= form_for :user, url: {action: "create"} do |user_form| %>
-                
         <div class="input">
           <%= user_form.text_field :name, placeholder: 'Nombre', class: 'data' %>
         </div>
@@ -69,16 +69,15 @@
           <div class="input">
           <%= user_form.phone_field :phone, placeholder: 'Teléfono', class: 'data'%>
         </div>
-
-        <% end %>
-
-    <footer>
-      <button type="submit"> Crear cuenta</button>
-
-    </footer>
-   </div>
-   -->
- </div> 
+        <div class="input">
+          <%= user_form.submit 'Crear cuenta' %>
+        </div>
+      <% end %>
+      <div class="close-container">
+        <%=image_tag('close_x.png', id:'close-x')%>
+      </div>
+  </div>
+</section>
 
 
 
